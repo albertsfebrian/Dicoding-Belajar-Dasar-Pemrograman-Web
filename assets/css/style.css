@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+p{
+    letter-spacing: 0.05rem;
+}
+#tentang-kami,#destinasi,#reservasi{
+    padding-top: 3rem;
+}
+body{
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+}
+section{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#navbar-basic-container,#navbar-mobile-container{
+    z-index: 10;
+}
+#navbar-basic-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 5rem;
+    
+    position: fixed;
+    top: 0px;
+}
+#navbar-mobile-container{
+    display: none;
+}
+
+#navbar-basic-container.color{
+    background-color: #33313b;
+    transition: 400ms all ease-in-out;
+}
+#navbar-basic-container.transparent{
+    background-color: rgba(0, 0, 0, 0);
+    transition: 400ms all ease-in-out;
+}
+
+.header-icon{
+    width: 12em;
+}
+
+.navbar,.navbar-mobile{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+.navbar-mobile{
+    justify-content: space-evenly;
+}
+.nav-item,.nav-item-mobile{
+    list-style-type: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.nav-item a{
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+.nav-item-mobile{
+    flex-basis: 25%;
+}
+.nav-item-mobile a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #33313b;
+    text-decoration: none;
+}
+.nav-item-mobile a span{
+    font-size: 0.8rem;
+}
+.nav-item.button{
+    background-color: #fc8621;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.nav-item.button:hover{
+    background-color: #e76c03;
+    transition: 250ms all ease-out;
+}
+.nav-item a:hover{
+    color: #fc8621;
+    transition: 250ms all ease-out;
+}
+.nav-item.button a:hover{
+    color: white;
+    transition: 250ms all ease-out;
+}
+.nav-item{
+    position: relative;
+}
+#dropdown ul{
+    margin-top: 16px;
+    position: absolute;
+    padding: 0px;
+    right: 0px;
+    list-style-type: none;
+    background-color: #33313b;
+    border-radius: 10px;
+
+    transition: top 200ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
+    z-index: 5;
+}
+#dropdown ul li{
+    text-align: end;
+    padding: 20px 30px;
+    cursor: pointer;
+    color: white;
+}
+#dropdown ul li:hover{
+    color: #fc8621;
+    transition: 250ms all ease-out;
+}
+#dropdown ul li a{
+    padding: 0px;
+}
+
+#jumbotron{
+    height: 100vh;
+    background-image: url("../img/jumbotron.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+#jumbotron::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.mobile-nav-icon{
+    height: 1.2em;
+    margin-bottom: .15em;
+    fill: #fc8621;
+    width: auto;
+}
+.jumbotron-content{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.jumbotron-content span{
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+.jumbotron-content img{
+    width: 50%;
+}
+.jumbotron-content h1{
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 0.3rem;
+}
+
+footer{
+    padding: 10px;
+    padding-top: 3rem;
+    background-color: #33313b;
+    color: white;
+}
+
+footer section:last-child{
+    text-align: end;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.footer-item{
+    flex-basis: 33.33%;
+}
+
+.footer-item img{
+    margin: 1em 0px;
+    width: 70%;
+}
+
+.footer-item ul{
+    padding: 0px;
+}
+.footer-item li{
+    padding-bottom: 15px;
+    list-style-type: none;
+}
+
+.footer-item a{
+    color: white;
+    text-decoration: none;
+}
+.footer-item a:hover{
+    color: #fc8621;
+}
+
+.icon-footer{
+    width: 3rem;
+    height: 3rem;
+    padding-right: 1em;
+    fill: white;
+}
+
+.footer-item > div{
+    padding-bottom: 15px;
+}
+.footer-item .info-container img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.footer-item .info-container{
+    display: flex;
+    align-items: center;
+}
+#tentang-kami .about>div{
+    flex-basis: 50%;
+}
+.title-content h2{
+    color: #fc8621;
+}
+.title-content h1{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-top: 0px;
+}
+
+.content{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.button-container{
+    padding-top: 1rem;
+    margin-bottom: 30px;
+}
+
+.title-content .button{
+    background-color: #fc8621;
+    padding: 15px 25px;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+}
+.title-content .button:hover{
+    background-color: #e76c03;
+    transition: 250ms all ease-out;
+}
+.spliter-image{
+    width: 100%;
+}
+.spliter-image .image-container{
+    flex-basis: 50%;
+    margin: 1rem;
+    width: 100%;
+    height: auto;
+}
+.spliter-image .image-container div{
+    height: 17rem;
+    width: 100%;
+}
+
+.spliter-image .image-container #about-1{
+    background-image: url(../img/about-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.spliter-image .image-container #about-2{
+    background-image: url(../img/about-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 10rem;
+}
+.benefits{
+    display: flex;
+    margin-top: 3rem;
+}
+.benefits>div{
+    flex-basis: 33.33%;
+    text-align: center;
+}
+.benefits div h3{
+    color: #fc8621;
+}
+.benefits div p{
+    text-align: justify;
+    padding: 15px;
+}
+
+.benefits .benefits-icon{
+    width: 25%;
+}
+#testimoni{
+    padding: 1rem 0rem 5rem 0rem;
+    background-color: #33313b;
+}
+
+#testimoni section h2{
+    color: white;
+    text-align: center;
+}
+
+#destinasi h2{
+    font-size: 2rem;
+    color: #fc8621;
+    text-align: end;
+}
+
+.destinasi{
+    display: flex;
+}
+
+.destinasi .card{
+    margin: 10px;
+    height: 550px;
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 10px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.destinasi .card .card-content{
+    background-color: rgba(0, 0,0, 0.7);
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card-content .button{
+    background-color: #fc8621;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.card-content .button:hover{
+    background-color: #e76c03;
+    transition: 250ms all ease-out;
+}
+#destinasi{
+    padding-bottom: 5rem;
+}
+.destinasi .card .card-content h1{
+    font-size: 1.5rem;
+}
+.destinasi .card:hover .card-content .other-info{
+    display: flex;
+}
+
+.bg-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 550ms ease-in-out;
+}
+
+#bali{
+    background-image: url(../img/destination/bali.jpg);
+}
+.destinasi .card:hover #bali{
+    background-image: url(../img/destination/bali-2.jpg);
+}
+#yogya{
+    background-image: url(../img/destination/yogyakarta.jpg);
+}
+.destinasi .card:hover #yogya{
+    background-image: url(../img/destination/yogyakarta-2.jpg);
+}
+#bandung{
+    background-image: url(../img/destination/bandung.jpg);
+}
+.destinasi .card:hover #bandung{
+    background-image: url(../img/destination/bandung-2.jpg);
+}
+
+#reservasi .reserve>div{
+    flex-basis: 50%;
+}
+
+.spliter-image .image-container #reservasi-1{
+    background-image: url(../img/reservasi-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.spliter-image .image-container #reservasi-2{
+    background-image: url(../img/reservasi-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 10rem;
+}
+
+form input{
+    width: 90%;
+    height: 52px;
+    font-size: 1.1rem;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 15px;
+    margin: 10px 0px;
+}
+
+form input:focus{
+    outline: none;
+}
+
+.reserve .title-content{
+    margin-left: 30px;
+}
+
+#reservasi{
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    #navbar-basic-container{
+        padding: 0rem 2rem;
+    }
+    .reserve .title-content{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    #navbar-basic-container{
+        display: none;
+    }
+    nav{
+        width: 100%;
+    }
+    #navbar-mobile-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0px;
+        height: 60px;
+        background-color: white;
+        width: 100%;
+        box-shadow: -1px 0px 5px 1px darkgray;
+    }
+    .jumbotron-content span{
+        font-size: 1.2rem;
+    }
+    .jumbotron-content img{
+        width: 70%;
+    }
+    .jumbotron-content h1{
+        font-size: 1.7rem;
+        letter-spacing: 0.1rem;
+    }
+    footer{
+        padding-bottom: 3.5rem;
+    }
+    .footer-content{
+        flex-direction: column;
+    }
+    footer section:last-child{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .spliter-image .image-container div{
+        height: 15rem ;
+    }
+    .spliter-image .image-container #about-2{
+        margin-top: 2.5rem ;
+    }
+    .spliter-image .image-container{
+        margin: 0.5rem;
+    }
+    .title-content h1{
+        font-size: 1.7rem;
+    }
+    .benefits div p{
+        padding: 0px;
+    }
+}
+
+@media (max-width: 350px){
+    .nav-item-mobile a span{
+        font-size: 0.7rem;
+    }
+    
+    .spliter-image .image-container div{
+        height: 10rem;
+    }
+    
+    .title-content h1{
+        font-size: 1.5rem;
+    }
+}

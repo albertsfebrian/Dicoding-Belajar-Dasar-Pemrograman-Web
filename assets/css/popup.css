@@ -1,0 +1,86 @@
+#pop-up{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 15;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-card{
+    border-radius: 20px;
+    background-color: white;
+    width: 50%;
+    min-height: 450px;
+}
+
+.pop-up-card .pop-up-content{
+    display: flex;
+}
+.pop-up-card .pop-up-content h1{
+    margin-top: 0px;
+}
+.pop-up-card .pop-up-content h3{
+    color: #fc8621;
+}
+.pop-up-card .pop-up-content img{
+    width: 100%;
+}
+.pop-up-card .pop-up-content>div{
+    flex-basis: 50%;
+    padding: 1rem 2.5rem 2.5rem;
+}
+
+.button-close{
+    text-align: end;
+    padding: 15px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.button-close svg{
+    height: 25px;
+    width: 25px;
+    fill: #fc8621;
+}
+
+.button-close svg:hover{
+    fill: #e76c03;
+}
+.pop-up-card .pop-up-content>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media (max-width:1024px){
+    .pop-up-card .pop-up-content{
+        flex-direction: row;
+    }
+    .pop-up-card{
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .pop-up-card{
+        width: 90%;
+        height: 550px;
+        overflow-y: scroll;
+    }
+    .button-close svg{
+        height: 15px;
+        width: 15px;
+    }
+    .pop-up-card .pop-up-content{
+        flex-direction: column;
+    }
+    .pop-up-card .pop-up-content>div{
+        padding: 10px 30px;
+    }
+}

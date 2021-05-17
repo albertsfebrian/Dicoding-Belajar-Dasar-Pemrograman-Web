@@ -1,0 +1,88 @@
+#testimoni-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.prev,.next{
+    margin: 0px 10px;
+    background-color: #fc8621;
+    fill: white;
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 300ms ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+}
+.prev:hover,.next:hover{
+    background-color: #e76c03;
+}
+.prev svg,.next svg{
+    width: 20px;
+    height: 20px;
+}
+
+.slider-overflow{
+    width: 54rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container{
+    display: inline-flex;
+    transition: 300ms all ease-in-out;
+}
+
+.slider-card{
+    min-width: 17rem;
+    width: 17rem;
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 2px solid #33313b;
+    border-radius: 10px;
+    background-color: white;
+
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.slider-card:hover{
+    transform: scale(1.025);
+}
+.slider-card h3{
+    color: #fc8621;
+    text-decoration: underline;
+}
+.slider-card img{
+    border-radius: 100%;
+    border: 1px solid #33313b;
+    width: 125px;
+    height: 125px;
+}
+.slider-card p{
+    margin: 0px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .slider-overflow{
+        width: 18rem;
+    }
+    .prev,.next{
+        display: none;
+    }
+}

@@ -1,0 +1,37 @@
+aside{
+    display: flex;
+    position: fixed;
+    bottom: 5rem;
+    z-index: 10;
+    transition: all 500ms ease-in-out;
+    
+    -webkit-tap-highlight-color: transparent;
+}
+#aside-icon svg{
+    width: 35px;
+    height: 35px;
+    fill: white;
+    margin: 15px;
+}
+#aside-icon {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+#aside-icon div,#aside-profile{
+    background-color: #fc8621;
+    border-radius: 10px 0px 0px 10px;
+}
+#aside-profile{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10px 0px 0px 0px;
+}
+#aside-profile img{
+    width: 150px;
+    border-radius: 10px;
+}
